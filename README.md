@@ -62,4 +62,4 @@ On **ResultScreen**:
 
 ## 🛠 Where to Implement Logic
 
-Write all required logic inside: App.tsx -> <Game/>
+Write all required logic inside: `App.tsx` -> `<Game/>`
