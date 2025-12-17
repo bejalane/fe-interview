@@ -62,29 +62,28 @@ function ResultScreen({
 // ----------------------------------------------------
 
 function Game() {
-  const [timeLeft, setTimeLeft] = useState(3);
+  const [timeLeft, setTimeLeft] = useState(4);
   const [userAnswer, setUserAnswer] = useState<Answer>(null);
   const [showResult, setShowResult] = useState(false);
 
   const handleAnswer = (answer: Answer) => {};
 
-  if (showResult) {
-    //     return (
-    //       <ResultScreen
-    //         question={QUESTION}
-    //         userAnswer={userAnswer}
-    //         isCorrect={}
-    //         lostByTimeout={}
-    //       />
-    //     );
-  }
-
   return (
-    <QuestionScreen
-      question={QUESTION}
-      timeLeft={timeLeft}
-      onAnswer={handleAnswer}
-    />
+    <>
+      <QuestionScreen
+        question={QUESTION}
+        timeLeft={timeLeft}
+        onAnswer={handleAnswer}
+      />
+      {showResult && (
+        <ResultScreen
+          question={QUESTION}
+          userAnswer={userAnswer}
+          isCorrect={false} // TODO: implement
+          lostByTimeout={false} // TODO: implement
+        />
+      )}
+    </>
   );
 }
 

@@ -14,9 +14,9 @@ Focus on correctness, timer behavior, and clean React state management.
 ### **Initial State**
 
 - The game starts on **QuestionScreen**.
-- `timeLeft` starts at **3 seconds**.
+- `timeLeft` starts at **4 seconds**.
 - A countdown timer decreases this value every second:  
-  **3 → 2 → 1 → 0**.
+  **4 → 3 → 2 → 1 → 0**.
 
 ---
 
